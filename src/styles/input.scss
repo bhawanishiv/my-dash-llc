@@ -1,0 +1,16 @@
+.md {
+  &-input {
+    padding: 0.5rem;
+    border: 1px solid var(--color-muted-light);
+
+    &__label {
+      color: var(--color-muted);
+    }
+    &__container {
+      display: flex;
+      &.--md-with-label {
+        flex-direction: column;
+      }
+    }
+  }
+}

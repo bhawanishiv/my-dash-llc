@@ -1,0 +1,20 @@
+*:root {
+  --color-primary: #33adff;
+  --color-on-primary: #ffffff;
+  --color-muted: #999999;
+  --color-muted-light: #dfdfdf;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.py-2 {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+@import './input.scss';
+@import './button.scss';
+@import './create-account.scss';

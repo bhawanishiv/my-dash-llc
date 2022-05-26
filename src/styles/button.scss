@@ -1,0 +1,14 @@
+.md {
+  &-btn {
+    &__contained {
+      border-radius: 0.4rem;
+      padding: 0.7rem 2.5rem;
+      cursor: pointer;
+      &.primary {
+        color: var(--color-on-primary);
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
