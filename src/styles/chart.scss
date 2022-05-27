@@ -1,0 +1,13 @@
+.md {
+  &-chart {
+    &__header {
+      padding: 0 1rem;
+      &--title {
+        margin-right: auto;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

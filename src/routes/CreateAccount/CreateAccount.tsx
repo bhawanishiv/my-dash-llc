@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 import React from 'react'
+
 import Button from '../../components/Button'
 import CheckBox from '../../components/CheckBox'
 import Input from '../../components/Input'
@@ -10,6 +12,13 @@ export interface CreateAccountProps {
 const CreateAccount: React.FC<CreateAccountProps> = (props) => {
   const { className } = props
 
+  const navigate = useNavigate()
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    navigate('/home')
+  }
+
   const renderCreateAccount = () => {
     return (
       <div className='md-cra__container'>
@@ -20,7 +29,7 @@ const CreateAccount: React.FC<CreateAccountProps> = (props) => {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, asperiores</p>
           </div>
         </div>
-        <div className='md-cra__form'>
+        <form noValidate onSubmit={handleSubmit} className='md-cra__form'>
           <h1>Create Account</h1>
           <Input name='email' label='Your email address' type='text' containerClassName='py-2' />
           <Input name='password' label='Your password' type='text' containerClassName='py-2' />
@@ -41,11 +50,11 @@ const CreateAccount: React.FC<CreateAccountProps> = (props) => {
             I read and agree Terms and Conditions
           </CheckBox>
           <div className='py-2'>
-            <Button variant='contained' color='primary'>
+            <Button type='submit' variant='contained' color='primary'>
               Create account
             </Button>
           </div>
-        </div>
+        </form>
       </div>
     )
   }
