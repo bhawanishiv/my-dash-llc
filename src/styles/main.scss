@@ -3,6 +3,7 @@
   --color-on-primary: #ffffff;
   --color-muted: #999999;
   --color-muted-light: #dfdfdf;
+  --color-danger: #ff0000;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   padding-bottom: 0.4rem;
 }
 
+@import './mixins.scss';
 @import './input.scss';
 @import './button.scss';
 @import './chart.scss';

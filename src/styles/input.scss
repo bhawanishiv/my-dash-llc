@@ -12,5 +12,11 @@
         flex-direction: column;
       }
     }
+
+    &__message {
+      &.error {
+        color: var(--color-danger);
+      }
+    }
   }
 }
